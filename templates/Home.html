@@ -1,0 +1,91 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!DOCTYPE HTML>
+<html>
+    <title>Little Garden Home</title>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    </head>
+
+
+    <body bgcolor="#ffcfcb">
+        <link href="{{ url_for('static', filename='Home.css')}}" rel="stylesheet">
+
+
+
+        <div class="grid-container">
+            <div class="grid-item"> <img src="{{ url_for('static', filename='HomeLogo.png')}}" width="40px" height="auto"></div>
+            <div class="grid-item-BTN"><button class="button" onclick="myFunctionhome()" >HOME</button></div>
+            <div class="grid-item-BTN"><button class="button" onclick="myFunctionabout()">ABOUT</button></div>  
+            <div class="grid-item-BTN"><button class="button" onclick="myFunctionvalues()">VALUES</button></div>
+            <div class="grid-item-BTN"><button class="button" onclick="myFunctionhelp()">HELP</button></div>
+
+        </div>
+
+
+        <div class="rcorners">
+
+            <p>hi</p>
+
+            <div id="sensor_data">
+                {{data}}
+            </div>
+
+            
+            <img src="{{ url_for('static', filename='FirstIdea.png')}}" width="500px" height="auto" >
+
+        </div>
+
+
+
+
+
+    <script>
+
+        $(function(){
+
+        window.setInterval(function(){
+            loadNewData()
+        }, 5000)
+
+        function loadNewData(){
+            $.ajax({
+                url:"/update_data",
+                type: "PUT",
+                dataType: "json",
+                success: function(data){
+                    $(sensor_data).replaceWith(data)
+                }
+
+            });
+        }
+        });
+
+
+        function myFunctionhome() {
+            window.location.href="Home.html";
+        }
+        function myFunctionabout() {
+            window.location.href="About.html";
+        }
+        function myFunctionvalues() {
+            window.location.href="Values.html";
+        }
+        function myFunctionhelp() {
+            window.location.href="Help.html";
+        }
+
+
+        
+    </script>   
+
+        <div class="footer">
+        <p>+43 660 454 1014</p>
+        <p>@little_garden_htl</p>
+        <p>littlegarden.htl@gmail.com</p>
+        
+        </div>
+
+
+    </body>
+
+</html>

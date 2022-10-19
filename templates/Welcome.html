@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome to Little Garden</title>
+
+<body bgcolor="#d8645b">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<link href="{{ url_for('static', filename='Welcome.css')}}" rel="stylesheet">
+
+    <img src="{{ url_for('static', filename='WelcomeLogo.png')}}" width="200px" height="auto" class="centerLogo">
+    <img src="{{ url_for('static', filename='Welcome.png')}}" width="100px" height="auto" class="center">
+
+    <button class="button" onclick="myFunction()">NEXT</button>
+
+
+</body>
+
+<script>
+    function myFunction()
+    {
+        window.location.href="{{ url_for( 'home') }}";
+    }
+</script>
+
+</html>

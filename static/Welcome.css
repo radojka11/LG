@@ -1,0 +1,32 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+
+  .centerLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    margin-top:100px;
+  }
+
+
+  .button { 
+    padding: 15px 25px; 
+    color: white;
+    border: 0px solid; 
+    background-color: transparent; 
+    font-weight : bold ;
+    font-size : 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.button:hover { 
+    text-decoration: underline;   
+}

@@ -1,0 +1,47 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+  }
+
+.button { 
+    padding: 15px 25px; 
+    color: white;
+    border: 0px solid; 
+    background-color: transparent; 
+    font-weight : bold ;
+    font-size : 20px;
+
+}
+
+
+.button:hover { 
+
+    text-decoration: underline;   
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 70px 90px 100px 120px 50px auto;
+
+    background-color: #d8645b;
+    grid-template-columns: repeat(5 );
+    grid-template-rows: repeat(1, 70px);
+  }
+  
+  .grid-item {
+    background-color: #d8645b;
+    padding: 0px;
+    font-size: 30px;
+    text-align: center;
+
+
+  }
+  .grid-item-BTN {
+    background-color: #d8645b;
+    padding: 0px;
+    text-align: center;
+  }
